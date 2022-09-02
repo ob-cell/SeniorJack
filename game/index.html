@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Click Click and then Click!</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+	<video id="background" src="resources/background.mp4" autoplay></video>
+
+	<span>Clicker by Thurinum and SirJack</span><br>
+	<em>Version 0.1</em>
+	<div id="ui">
+		<h1 id="playerlevel">Level 1</h1>
+		<p id="playerxp2levelup">Score left to level 2: 10</p>
+		<p id="playerxp">Total score: 0</p>
+		<p id="playerCps">Clicks per second (CPS): 0</p>
+		<br />
+
+		<!-- Progress bar -->
+		<div class="progressBar">
+			<div id="progressXP"></div><span id="progress">0%</span>
+		</div><br />
+		<button id="addXP">Click to start</button>
+	</div>
+	<div id="settings">
+		<h3 id="settingsHeader">Settings</h3>
+		<h2>Game options</h2>
+		<label>
+			Difficulty level
+			<select id="set_difficulty">
+				<option title="Score goal always stays the same.">Easy</option>
+				<option title="Score goal increases of 10% per level." selected>Normal</option>
+				<option disabled>Locked</option>
+				<option disabled>Locked</option>
+			</select>
+		</label>
+		<br /><br />
+		<label>
+			<input id="set_cheat" type="checkbox" />
+			Ultra-speed cheat
+		</label>
+	</div>
+	<div id="achievement">
+		<h3 id="achievementName"></h3>
+		<p id="achievementDes"></p>
+	</div>
+	<script src="main.js"></script>
+</body>
+
+</html>
