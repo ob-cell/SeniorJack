@@ -14,13 +14,21 @@
       li{
       color:white;
       }
+	    .container {
+  border: 2px solid #dedede;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
     </style>
   </head>
 	<center><img src="banner.png" alt="The Banner"></center>
 	<!--<center><img src="gui.png" alt="GUI"></center> -->
   <body>    
   <audio src="msn.mp3" id="audio" controls style="display: none;"></audio>
-    <div id="chat">     
+    <div class="container">
+	  <div id="chat">     
 	
 <br>
 <br>
@@ -30,7 +38,7 @@
         <form id="send-message">
           <center><input id="chat-txt" type="text"/></center>
 		  <div id="messageBox">
-
+		</div>
         </div>
         </div>
           <center><button id="chat-btn" type="submit" onclick="playAudio();">Submit</button></center>
