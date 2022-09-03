@@ -3,46 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>UltimateChatBox | By SirJack</title>   
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-11">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <span class="glyphicon glyphicon-comment"></span> Chat                      
-                    </div>
-                    <div class="panel-body">
-                        <ul class="chat">
-
-                        	
-                        </ul>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="input-group">
-                            <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
-                            <span class="input-group-btn">
-                                <button class="btn btn-warning btn-sm send-button" id="btn-chat">
-                                    Send</button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- firebase js -->
-    <script  src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
-    <script  src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
-    <script  src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
-    <script  src="https://www.gstatic.com/firebasejs/7.13.2/firebase-storage.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="script.js"></script>
-
+    <title>Sirjack's Shitpost Chat </title>   
+  </head>
+  <body>    
+    <div id="chat">     
+        <ul id="messages"></ul>
+        <form id="send-message">
+          <input id="chat-txt" type="text" />
+          <button id="chat-btn" type="submit">Submit</button>
+        </form>      
+    </div>    
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+    <script src="script.js"></script>   
   </body>
 </html>
