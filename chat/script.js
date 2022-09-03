@@ -15,3 +15,23 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 const username = prompt("Hello and welcome! What's your nickname?");
+
+document.getElementById("send-message").addEventListener("submit", postChat);
+function postChat(e) {
+  e.preventDefault();
+  const timestamp = Date.now();
+  const chatTxt = document.getElementById("chat-txt");
+  const message = chatTxt.value;
+  chatTxt.value = "";
+  db.ref("messages/" + timestamp).set({
+    usr: username,
+    msg: message,
+  });
+}
+
+const fetchChat = db.ref("messages/");
+fetchChat.on("child_added", function (snapshot) {
+  const messages = snapshot.val();
+  const msg = "<li>" + messages.usr + " : " + messages.msg + "</li>";
+  document.getElementById("messages").innerHTML += msg;
+});
