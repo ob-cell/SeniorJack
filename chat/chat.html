@@ -42,11 +42,17 @@
           <center><input id="chat-txt" type="text"/></center>
           <center><button id="chat-btn" type="submit" onclick="playAudio();" onclick="pageScroll();">Submit</button></center>
 				  <script>
-				  
 function pageScroll() {
     window.scrollBy(0,1);
     scrolldelay = setTimeout(pageScroll,10);
-} 
+}
+const pageScroll = () => {
+  window.setInterval(() => {
+
+    // Scroll 10px all 25ms
+    window.scrollBy(0, 10)
+  }, 25)
+}
 	
 				  
 				  </script>
